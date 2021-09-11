@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://kit.fontawesome.com/aaa5d1efca.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./index.css" rel="stylesheet" />
+    <title>Food Ordering</title>
+</head>
+<body> <div id = "main" >
+
+<div id = "menu-bar">
+       <p id = "menu"><i class="fas fa-bars"></i> MENU</p>
+</div>
+
+    <div id = "food-menu" >
+
+    <div id = "rice-1" class = "rice" draggable="true" ondragstart="drag(event)"  >
+        <p class = "rating" >
+             <i class="fas fa-star" style = "color: yellow;"></i>
+             4.2 </p>  
+      <button id = "test1" class = "test" onclick = "change(event)" ><img src = "heart.jpg" class = "img-heart" /></button>
+             <br> 
+               <img src = "rice-modified.png" id = "rice-image" /> <br>
+        <p style = " margin-left: 5px;">Rice Pudding <span>250g</span></p>  
+        <span style = " margin-left: 5px;">$4.33</span>
+        
+    </div>
+
+<div id = "rice-2" class = "rice" draggable="true" ondragstart="drag(event)"  >
+    <p class = "rating" >
+         <i class="fas fa-star" style = "color: yellow;"></i>
+         4.2</p>  
+  <button id = "test2" class = "test" onclick = "change(event)" ><img src = "heart.jpg" class = "img-heart" /></button>
+         <br> 
+           <img src = "rice-modified.png" id = "rice-image" /> <br>
+    <p style = " margin-left: 5px;">Rice Pudding <span>250g</span></p>  
+    <span style = " margin-left: 5px;">$4.33</span>
+    
+</div>
+
+<div id = "rice-3" class = "rice" draggable="true" ondragstart="drag(event)"  >
+    <p class = "rating" >
+         <i class="fas fa-star" style = "color: yellow;"></i>
+         4.2</p>  
+  <button id = "test3" class = "test" onclick = "change(event)" ><img src = "heart.jpg" class = "img-heart" /></button>
+         <br> 
+           <img src = "rice-modified.png" id = "rice-image" /> <br>
+    <p style = " margin-left: 5px;">Rice Pudding <span>250g</span></p>  
+    <span style = " margin-left: 5px;">$4.33</span>
+    
+</div>
+
+<div id = "rice-4" class = "rice" draggable="true" ondragstart="drag(event)"  >
+    <p class = "rating" >
+         <i class="fas fa-star" style = "color: yellow;"></i>
+         4.2</p>  
+  <button id = "test4" class = "test" onclick = "change(event)" ><img src = "heart.jpg" class = "img-heart" /></button>
+         <br> 
+           <img src = "rice-modified.png" id = "rice-image" /> <br>
+    <p style = " margin-left: 5px;">Rice Pudding <span>250g</span></p>  
+    <span style = " margin-left: 5px;">$4.33</span>
+    
+</div>
+
+     <div id = "rice-5" class = "rice" draggable="true" ondragstart="drag(event)"  >
+        <p class = "rating" >
+             <i class="fas fa-star" style = "color: yellow;"></i>
+             4.2</p>  
+      <button id = "test5" class = "test" onclick = "change(event)" ><img src = "heart.jpg" class = "img-heart" /></button>
+             <br> 
+               <img src = "rice-modified.png" id = "rice-image" /> <br>
+        <p style = " margin-left: 5px;">Rice Pudding <span>250g</span></p>  
+        <span style = " margin-left: 5px;">$4.33</span>
+        
+    </div>
+
+</div>
+
+<div id = "cart">
+
+    <h3 style = "font-family: Verdana, Geneva, Tahoma, sans-serif;">My Order</h3>
+    <div id= "div-drop" ondrop="drop(event)" ondragover="allowDrop(event)"> 
+      <p style = "border: dotted; margin-top: 20px; display: inline-block;" >  Drag and drop here  </p> 
+    </div> <br>
+   <p style = "display: inline; font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold;" >Total  
+    <p id = "amount" style = "display: inline; margin-left: 250px; font-weight: bold;"></p></p>  <br>
+    <a href = "./index2.html" > <button type = "submit" id = "checkout">Checkout</button> </a> 
+      
+</div>
+</div>
+
+<script>
+      var a = 0;
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+    
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+    function drop(ev) {
+       ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+    var l = ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.width = "200px";
+    document.getElementById(data).style.height = "40px";
+     document.getElementById(data).innerHTML = "<div id = 'rice-drop'>" + 
+      "  <img src = 'rice-modified.png' id = 'rice-image-drop'/><p id = 'pudding'>Rice Pudding </p><span>250g</span> "
+      + " <span id = 'price'>$4.33</span> </div> ";
+  
+      a++;
+      let b = 4.33 * a;
+    document.getElementById("amount").innerHTML = b;
+      }
+   var c = 0;
+     function change(eve){
+      var dataa = eve.target.id;
+         if(c%2==0){
+         document.getElementById(dataa).innerHTML = "<img src = 'heartred.jpg' style = 'width: 20px; border-radius: 52px'/> ";
+         }
+         else{
+             document.getElementById(dataa).innerHTML = "<img src = 'heart.jpg' style = 'width: 20px; height: auto' />" ;        }
+         c++;   
+        }
+    </script>
+</body>
+</html>
+
+  <!-- <div id = "rice-1" class = "rice" draggable="true" ondragstart="drag(event)"  >
+        <p class = "rating" >
+             <i class="fas fa-star" style = "color: yellow;"></i>
+             4.2</p>  
+        
+             <i class="far fa-heart" id = "heart" style = "margin-left: 125px; background-color: white;" ></i>
+      
+             <br> 
+               <img src = "rice-modified.png" id = "rice-image" /> <br>
+        <p style = " margin-left: 5px;">Rice Pudding <span>250g</span></p>  
+        <span style = " margin-left: 5px;">$4.33</span>
+        
+    </div> -->
+
+
+
+    <!-- var d = 0;
+    d++;
+     if(d%2==0){
+     document.getElementById(data).style.width = "200px";
+     document.getElementById(data).style.height = "40px";
+      document.getElementById(data).innerHTML = "<div id = 'rice-drop'>" + 
+       "  <img src = 'rice-modified.png' id = 'rice-image-drop'/><p id = 'pudding'>Rice Pudding </p><span>250g</span> "
+       + " <span id = 'price'>$4.33</span> </div> ";
+     }
+     else{
+       document.getElementById(data).innerHTML = "<div id = 'rice-5' class = 'rice' draggable='true' ondragstart='drag(event)' > " +
+        " <p class = 'rating' > <i class='fas fa-star' style = 'color: yellow;''></i> 4.2 </p> " +   
+      " <button id = 'test5' class = 'test' onclick = 'change(event)'' ><img src = 'heart.jpg' class = 'img-heart' /></button> " +
+   "  <br>  <img src = 'rice-modified.png' id = 'rice-image' /> <br> <p style = '' margin-left: 5px;''>Rice Pudding <span>250g</span></p> " +
+        "  <span style = ' margin-left: 5px;'>$4.33</span>  </div> ";
+       } -->

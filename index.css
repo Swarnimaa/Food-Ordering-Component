@@ -1,0 +1,116 @@
+#main {
+    display: flex;
+    flex-wrap: wrap;
+}
+#food-menu {
+    width: 50%;
+    height: auto;
+    margin: 10px;
+    margin-top: 70px;
+    padding: 2px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+#menu-bar {
+    background-color: rgb(73, 216, 147);
+    width: 20%;
+    height: 650px;
+}
+#menu {
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    border: none;
+    margin-top: 70px;
+    margin-left: 15%;
+    font-size: 25px;
+    padding: 10px;
+    background-color: white;
+    font-size: 15px;
+    color: rgb(73, 216, 147);
+    font-weight: bolder;
+    font-family: sans-serif;
+}
+span {
+    font-weight: bold;
+    /* border: 2px solid black; */
+}
+.rating {
+     background-color: black; 
+    color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: inline-block;
+    font-family: sans-serif;
+    padding: 3px;
+    }
+#rice-image {
+    margin-left: 30px;
+       max-width: 55%;
+        height: auto;
+        border-radius: 50px;
+        box-shadow: 10px 10px 5px grey;
+    }
+.rice {
+    /* border: 1px solid black; */
+    width: 30%;
+    height: 45%;
+    margin: 5px;
+    padding: 5px;
+    background-color: rgb(245, 229, 231);
+    border: none;
+    border-radius: 15px;
+}
+#div-drop {
+    /* border: 2px solid rgb(240, 26, 26); */
+    height: 400px;
+    width: 95%;
+    display: block;
+    flex-direction: row;
+}
+#cart {
+    /* border: 2px solid black; */
+    width: 25%;
+    height: 90%;
+    padding: 10px;
+}
+#checkout {
+    background-color: rgb(73, 216, 147);
+    color: white;
+    border-radius: 25px;
+    margin-top: -2px;
+    margin-left: 45px;;
+    padding: 10px;
+    border: none;
+    font-size: 15px;
+    width: 60%;
+    text-align: center;
+}
+#rice-drop{
+  display: block;
+}
+#rice-image-drop {
+max-width: 15%;
+display: inline-block;
+}
+#pudding {
+    font-size: 15px;
+   display: inline;
+}
+#price {
+    float: right;
+   font-size: 15px;
+}
+.test {
+    width: 35px;
+     padding: 0px;
+      height: 25px;
+      border-radius: 20px;
+      margin-left: 100px;
+      border: none;
+}
+.img-heart {
+    width: 20px;
+     height: auto;
+     border-radius: 70px;
+}
